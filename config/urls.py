@@ -23,6 +23,10 @@ from drf_yasg import openapi
 
 from config import settings
 
+from celery import shared_task
+
+@shared_task
+
 schema_view = get_schema_view(
     openapi.Info(
         title='front docs',
